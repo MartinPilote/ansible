@@ -1,0 +1,21 @@
+---
+is_managed: true
+
+# connectivity
+host: 'srv-dc01.mpilote.com'
+name: 'srv-dc01'
+ssh_user: 'root'
+ssh_password: '{{ vault_ssh_password }}'
+
+# telegraf
+telegraf_config: 'telegraf_generic'
+telegraf_token: '{{ vault_telegraf_token }}'
+
+# platform-specific
+microcode: none
+
+# app defaults
+
+# application selection
+
+# desktop environment selection

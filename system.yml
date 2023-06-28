@@ -1,0 +1,60 @@
+# tasks to complete before running roles
+- hosts: all
+  tags: always
+  become: true
+  pre_tasks:
+    - name: Pre-run | Update package cache RedHat
+      tags: always
+      dnf: update_cache=yes
+      changed_when: False
+      when: ansible_os_family == "RedHat"
+    - name: Pre-run | Upgrade all packages RedHat
+      dnf:
+        name: "*"
+        state: latest
+      when: ansible_os_family == "RedHat"
+
+# run roles
+- hosts: all
+  tags: base
+  become: true
+  roles:
+    - cockpit
+
+- hosts: workstation
+  tags: workstation
+  become: true
+  roles:
+
+- hosts: server
+  tags: server
+  become: true
+  roles:
+
+- hosts: domaincontroller
+  tags: domaincontroller
+  become: true
+  roles:
+
+# end of run cleanup and reporting
+- hosts: all
+  become: true
+  tasks:
+  - name: Post-run | Remove orphan packages
+    tags: always
+    dnf:
+      autoremove: yes
+    when: ansible_os_family == "RedHat"
+
+  - name: Post-run | Send completion alert
+    include_tasks: playbooks/send_completion_alert.yml
+    tags: always
+    when:
+      - task_failed is not defined
+
+  - name: Post-run | Send failure alert
+    include_tasks: playbooks/send_failure_alert.yml
+    tags: always
+    when:
+      - task_failed is defined
+      - task_failed == true

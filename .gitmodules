@@ -1,0 +1,3 @@
+[submodule "roles/cockpit"]
+	path = roles/cockpit
+	url = https://github.com/MartinPilote/ansible_role_cockpit.git

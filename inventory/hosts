@@ -1,0 +1,20 @@
+---
+all:
+  hosts:
+  children:
+    server:
+      children:
+        domaincontroller:
+          hosts:
+            srv-dc01:
+              ansible_host: 'srv-dc01.mpilote.com'
+              ansible_connection: 'ssh'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+            srv-dc02:
+              ansible_host: 'srv-dc02.mpilote.com'
+              ansible_connection: 'ssh'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+    workstation:
+      hosts:
