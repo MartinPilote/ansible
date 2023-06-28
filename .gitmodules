@@ -1,3 +1,6 @@
 [submodule "roles/cockpit"]
 	path = roles/cockpit
-	url = https://github.com/MartinPilote/ansible_role_cockpit.git
+	url = https://github.com/MartinPilote/ansible-role-cockpit.git
+[submodule "roles/idm"]
+	path = roles/idm
+	url = https://github.com/MartinPilote/ansible-role-idm.git
