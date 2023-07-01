@@ -20,6 +20,7 @@
   become: true
   roles:
     - cockpit
+    - telegraf
 
 - hosts: workstation
   tags: workstation
