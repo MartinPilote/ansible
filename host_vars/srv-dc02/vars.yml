@@ -1,0 +1,22 @@
+---
+is_managed: true
+
+# connectivity
+host: 'srv-dc02.mpilote.com'
+name: 'srv-dc02'
+ssh_user: '{{ vault_ssh_user }}'
+ssh_password: '{{ vault_ssh_password }}'
+ssh_become_pass: '{{ vault_ssh_become_pass }}'
+
+# telegraf
+telegraf_config: 'telegraf_generic'
+telegraf_token: '{{ vault_telegraf_token }}'
+
+# platform-specific
+microcode: none
+
+# app defaults
+
+# application selection
+
+# desktop environment selection
