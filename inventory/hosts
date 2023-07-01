@@ -9,37 +9,37 @@ all:
     server:
       hosts:
         srv-graph:
-          ansible_host: 'srv-graph.mpilote.com'
+          ansible_host: '{{ host_fqdn }}'
           ansible_user: '{{ ssh_user }}'
           ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: "{{ ssh_become_pass }}"
+          ansible_become_pass: '{{ ssh_become_pass }}'
         srv-log:
-          ansible_host: 'srv-log.mpilote.com'
+          ansible_host: '{{ host_fqdn }}'
           ansible_user: '{{ ssh_user }}'
           ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: "{{ ssh_become_pass }}"
+          ansible_become_pass: '{{ ssh_become_pass }}'
         srv-metric:
-          ansible_host: 'srv-metric.mpilote.com'
+          ansible_host: '{{ host_fqdn }}'
           ansible_user: '{{ ssh_user }}'
           ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: "{{ ssh_become_pass }}"
+          ansible_become_pass: '{{ ssh_become_pass }}'
         srv-postgresql:
-          ansible_host: 'srv-postgresql.mpilote.com'
+          ansible_host: '{{ host_fqdn }}'
           ansible_user: '{{ ssh_user }}'
           ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: "{{ ssh_become_pass }}"
+          ansible_become_pass: '{{ ssh_become_pass }}'
       children:
         domaincontroller:
           hosts:
             srv-dc01:
-              ansible_host: 'srv-dc01.mpilote.com'
+              ansible_host: '{{ host_fqdn }}'
               ansible_user: '{{ ssh_user }}'
               ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: "{{ ssh_become_pass }}"
+              ansible_become_pass: '{{ ssh_become_pass }}'
             srv-dc02:
-              ansible_host: 'srv-dc02.mpilote.com'
+              ansible_host: '{{ host_fqdn }}'
               ansible_user: '{{ ssh_user }}'
               ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: "{{ ssh_become_pass }}"
+              ansible_become_pass: '{{ ssh_become_pass }}'
     workstation:
       hosts:
