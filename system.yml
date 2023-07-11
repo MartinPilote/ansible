@@ -50,11 +50,17 @@
   become: true
   roles:
 
+- hosts: serverinfluxdb
+  tags: serverinfluxdb
+  become: true
+  roles:
+    - influxdb
+
 - hosts: serverpostgresql
   tags: serverpostgresql
   become: true
   roles:
-    - pgadmin
+    # - pgadmin
 
 # end of run cleanup and reporting
 - hosts: all
