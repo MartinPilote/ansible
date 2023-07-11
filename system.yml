@@ -3,24 +3,35 @@
   tags: always
   become: true
   pre_tasks:
-    - name: Pre-run | Update package cache RedHat
+    - name: Update package cache RedHat
       tags: always
       dnf: update_cache=yes
       changed_when: False
       when: ansible_os_family == "RedHat"
-    - name: Pre-run | Upgrade all packages RedHat
+    - name: Upgrade all packages RedHat
       dnf:
         name: "*"
         state: latest
       when: ansible_os_family == "RedHat"
+    - name: Update package cache Debian
+      tags: always
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+      changed_when: False
+      when: ansible_os_family == "Debian"
+    - name: Upgrade all packages Debian
+      apt: upgrade=dist force_apt_get=yes
+      when: ansible_os_family == "Debian"
 
 # run roles
 - hosts: all
   tags: base
   become: true
   roles:
-    - cockpit
-    - telegraf
+
+- hosts: proxmox
+  tags: proxmox
+  become: true
+  roles:
 
 - hosts: workstation
   tags: workstation
@@ -31,11 +42,19 @@
   tags: server
   become: true
   roles:
+    - cockpit
+    - telegraf
 
-- hosts: domaincontroller
-  tags: domaincontroller
+- hosts: serverdomaincontroller
+  tags: serverdomaincontroller
   become: true
   roles:
+
+- hosts: serverpostgresql
+  tags: serverpostgresql
+  become: true
+  roles:
+    - pgadmin
 
 # end of run cleanup and reporting
 - hosts: all

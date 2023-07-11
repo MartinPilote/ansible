@@ -6,40 +6,64 @@ all:
     ansible_become_method: sudo
   hosts:
   children:
+    proxmox:
+      hosts:
+        srv-pve01:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-pve02:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-pve03:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-pve04:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
     server:
       hosts:
-        srv-graph:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-log:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-metric:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-postgresql:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-graph:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-log:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-metric:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
       children:
-        domaincontroller:
+        serverdomaincontroller:
           hosts:
-            srv-dc01:
-              ansible_host: '{{ host_fqdn }}'
-              ansible_user: '{{ ssh_user }}'
-              ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: '{{ ssh_become_pass }}'
-            srv-dc02:
-              ansible_host: '{{ host_fqdn }}'
-              ansible_user: '{{ ssh_user }}'
-              ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: '{{ ssh_become_pass }}'
+            # srv-dc01:
+            #   ansible_host: '{{ host_fqdn }}'
+            #   ansible_user: '{{ ssh_user }}'
+            #   ansible_password: '{{ ssh_password }}'
+            #   ansible_become_pass: '{{ ssh_become_pass }}'
+            # srv-dc02:
+            #   ansible_host: '{{ host_fqdn }}'
+            #   ansible_user: '{{ ssh_user }}'
+            #   ansible_password: '{{ ssh_password }}'
+            #   ansible_become_pass: '{{ ssh_become_pass }}'
+        serverpostgresql:
+          hosts:
+            # srv-postgresql:
+            #   ansible_host: '{{ host_fqdn }}'
+            #   ansible_user: '{{ ssh_user }}'
+            #   ansible_password: '{{ ssh_password }}'
+            #   ansible_become_pass: '{{ ssh_become_pass }}'
     workstation:
       hosts:
