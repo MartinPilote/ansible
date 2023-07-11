@@ -4,3 +4,12 @@
 [submodule "roles/telegraf"]
 	path = roles/telegraf
 	url = https://github.com/MartinPilote/ansible-role-telegraf.git
+[submodule "roles/pgadmin"]
+	path = roles/pgadmin
+	url = https://github.com/MartinPilote/ansible-role-pgadmin.git
+[submodule "roles/repo-epel"]
+	path = roles/repo-epel
+	url = https://github.com/geerlingguy/ansible-role-repo-epel.git
+[submodule "roles/influxdb"]
+	path = roles/influxdb
+	url = https://github.com/MartinPilote/ansible-role-influxdb.git
