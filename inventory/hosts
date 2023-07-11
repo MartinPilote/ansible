@@ -40,24 +40,26 @@ all:
         #   ansible_user: '{{ ssh_user }}'
         #   ansible_password: '{{ ssh_password }}'
         #   ansible_become_pass: '{{ ssh_become_pass }}'
-        # srv-metric:
-        #   ansible_host: '{{ host_fqdn }}'
-        #   ansible_user: '{{ ssh_user }}'
-        #   ansible_password: '{{ ssh_password }}'
-        #   ansible_become_pass: '{{ ssh_become_pass }}'
       children:
         serverdomaincontroller:
           hosts:
-            # srv-dc01:
-            #   ansible_host: '{{ host_fqdn }}'
-            #   ansible_user: '{{ ssh_user }}'
-            #   ansible_password: '{{ ssh_password }}'
-            #   ansible_become_pass: '{{ ssh_become_pass }}'
-            # srv-dc02:
-            #   ansible_host: '{{ host_fqdn }}'
-            #   ansible_user: '{{ ssh_user }}'
-            #   ansible_password: '{{ ssh_password }}'
-            #   ansible_become_pass: '{{ ssh_become_pass }}'
+            srv-dc01:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
+            srv-dc02:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
+        serverinfluxdb:
+          hosts:
+            srv-metric:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
         serverpostgresql:
           hosts:
             # srv-postgresql:
