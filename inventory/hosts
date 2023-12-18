@@ -40,6 +40,36 @@ all:
         #   ansible_user: '{{ ssh_user }}'
         #   ansible_password: '{{ ssh_password }}'
         #   ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-mqtt01:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-mqtt02:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-mqtt03:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-mqtt04:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-mqtt05:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+        srv-mqtt06:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
       children:
         serverdomaincontroller:
           hosts:

@@ -1,0 +1,25 @@
+---
+is_managed: true
+
+# connectivity
+host_fqdn: 'srv-mqtt01.mpilote.com'
+host_name: 'srv-mqtt01'
+host_domain: 'mpilote.com'
+
+ssh_user: '{{ vault_ssh_user }}'
+ssh_password: '{{ vault_ssh_password }}'
+ssh_become_pass: '{{ vault_ssh_become_pass }}'
+
+# telegraf
+telegraf_url: 'http://srv-metric.mpilote.com:8086'
+telegraf_config: 'telegraf_generic'
+telegraf_token: '{{ vault_telegraf_token }}'
+
+# platform-specific
+microcode: none
+
+# app defaults
+
+# application selection
+
+# desktop environment selection
