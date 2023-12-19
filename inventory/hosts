@@ -8,26 +8,26 @@ all:
   children:
     proxmox:
       hosts:
-        srv-pve01:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-pve02:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-pve03:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-pve04:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-pve01:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-pve02:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-pve03:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-pve04:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
     server:
       hosts:
         # srv-graph:
@@ -40,56 +40,56 @@ all:
         #   ansible_user: '{{ ssh_user }}'
         #   ansible_password: '{{ ssh_password }}'
         #   ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-mqtt01:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-mqtt02:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-mqtt03:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-mqtt04:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-mqtt05:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-        srv-mqtt06:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-mqtt01:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-mqtt02:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-mqtt03:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-mqtt04:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-mqtt05:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        # srv-mqtt06:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
       children:
         serverdomaincontroller:
           hosts:
-            srv-dc01:
-              ansible_host: '{{ host_fqdn }}'
-              ansible_user: '{{ ssh_user }}'
-              ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: '{{ ssh_become_pass }}'
-            srv-dc02:
-              ansible_host: '{{ host_fqdn }}'
-              ansible_user: '{{ ssh_user }}'
-              ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: '{{ ssh_become_pass }}'
+            # srv-dc01:
+            #   ansible_host: '{{ host_fqdn }}'
+            #   ansible_user: '{{ ssh_user }}'
+            #   ansible_password: '{{ ssh_password }}'
+            #   ansible_become_pass: '{{ ssh_become_pass }}'
+            # srv-dc02:
+            #   ansible_host: '{{ host_fqdn }}'
+            #   ansible_user: '{{ ssh_user }}'
+            #   ansible_password: '{{ ssh_password }}'
+            #   ansible_become_pass: '{{ ssh_become_pass }}'
         serverinfluxdb:
           hosts:
-            srv-metric:
-              ansible_host: '{{ host_fqdn }}'
-              ansible_user: '{{ ssh_user }}'
-              ansible_password: '{{ ssh_password }}'
-              ansible_become_pass: '{{ ssh_become_pass }}'
+            # srv-metric:
+            #   ansible_host: '{{ host_fqdn }}'
+            #   ansible_user: '{{ ssh_user }}'
+            #   ansible_password: '{{ ssh_password }}'
+            #   ansible_become_pass: '{{ ssh_become_pass }}'
         serverpostgresql:
           hosts:
             # srv-postgresql:
@@ -99,3 +99,9 @@ all:
             #   ansible_become_pass: '{{ ssh_become_pass }}'
     workstation:
       hosts:
+        wks-lpt01:
+          ansible_host: '{{ host_fqdn }}'
+          ansible_user: '{{ ssh_user }}'
+          ansible_password: '{{ ssh_password }}'
+          ansible_become_pass: '{{ ssh_become_pass }}'
+          ansible_sudo_pass: '{{ ssh_become_pass }}'

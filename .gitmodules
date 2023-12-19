@@ -13,3 +13,9 @@
 [submodule "roles/influxdb"]
 	path = roles/influxdb
 	url = https://github.com/MartinPilote/ansible-role-influxdb.git
+[submodule "roles/users"]
+	path = roles/users
+	url = https://github.com/MartinPilote/ansible-role-users.git
+[submodule "roles/gnupg"]
+	path = roles/gnupg
+	url = https://github.com/MartinPilote/ansible-role-gnupg.git

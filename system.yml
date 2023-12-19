@@ -37,6 +37,8 @@
   tags: workstation
   become: true
   roles:
+    - gnupg
+    - users
 
 - hosts: server
   tags: server
