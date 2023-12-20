@@ -19,3 +19,6 @@
 [submodule "roles/gnupg"]
 	path = roles/gnupg
 	url = https://github.com/MartinPilote/ansible-role-gnupg.git
+[submodule "roles/vscode"]
+	path = roles/vscode
+	url = https://github.com/MartinPilote/ansible-role-vscode.git

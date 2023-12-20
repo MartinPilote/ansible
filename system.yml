@@ -38,6 +38,7 @@
   become: true
   roles:
     - gnupg
+    - vscode
     - users
 
 - hosts: server
