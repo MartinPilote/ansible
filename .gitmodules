@@ -22,3 +22,6 @@
 [submodule "roles/vscode"]
 	path = roles/vscode
 	url = https://github.com/MartinPilote/ansible-role-vscode.git
+[submodule "roles/certbot"]
+	path = roles/certbot
+	url = https://github.com/MartinPilote/ansible-role-certbot.git

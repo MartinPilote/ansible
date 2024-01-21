@@ -1,0 +1,30 @@
+---
+is_managed: true
+
+# connectivity
+host_fqdn: 'srv-monitoring.mpilote.com'
+host_name: 'srv-monitoring'
+host_domain: 'mpilote.com'
+
+ssh_user: '{{ vault_ssh_user }}'
+ssh_password: '{{ vault_ssh_password }}'
+ssh_become_pass: '{{ vault_ssh_become_pass }}'
+
+# telegraf
+telegraf_url: 'http://srv-metric.mpilote.com:8086'
+telegraf_config: 'telegraf_generic'
+telegraf_token: '{{ vault_telegraf_token }}'
+
+# certbot
+certbot_email: martin@mpilote.com
+certbot_aws_access_key_id: '{{ vault_certbot_aws_access_key_id }}'
+certbot_aws_secret_access_key: '{{ vault_certbot_aws_secret_access_key }}'
+
+# platform-specific
+microcode: none
+
+# app defaults
+
+# application selection
+
+# desktop environment selection

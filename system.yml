@@ -47,17 +47,18 @@
   roles:
     - cockpit
     - telegraf
+    - certbot
 
 - hosts: serverdomaincontroller
   tags: serverdomaincontroller
   become: true
   roles:
 
-- hosts: serverinfluxdb
-  tags: serverinfluxdb
+- hosts: servermonitoring
+  tags: servermonitoring
   become: true
   roles:
-    - influxdb
+    #- influxdb
 
 - hosts: serverpostgresql
   tags: serverpostgresql

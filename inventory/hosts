@@ -83,13 +83,18 @@ all:
             #   ansible_user: '{{ ssh_user }}'
             #   ansible_password: '{{ ssh_password }}'
             #   ansible_become_pass: '{{ ssh_become_pass }}'
-        serverinfluxdb:
+        servermonitoring:
           hosts:
             # srv-metric:
             #   ansible_host: '{{ host_fqdn }}'
             #   ansible_user: '{{ ssh_user }}'
             #   ansible_password: '{{ ssh_password }}'
             #   ansible_become_pass: '{{ ssh_become_pass }}'
+            srv-monitoring:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
         serverpostgresql:
           hosts:
             # srv-postgresql:
@@ -99,9 +104,9 @@ all:
             #   ansible_become_pass: '{{ ssh_become_pass }}'
     workstation:
       hosts:
-        wks-lpt01:
-          ansible_host: '{{ host_fqdn }}'
-          ansible_user: '{{ ssh_user }}'
-          ansible_password: '{{ ssh_password }}'
-          ansible_become_pass: '{{ ssh_become_pass }}'
-          ansible_sudo_pass: '{{ ssh_become_pass }}'
+        # wks-lpt01:
+        #   ansible_host: '{{ host_fqdn }}'
+        #   ansible_user: '{{ ssh_user }}'
+        #   ansible_password: '{{ ssh_password }}'
+        #   ansible_become_pass: '{{ ssh_become_pass }}'
+        #   ansible_sudo_pass: '{{ ssh_become_pass }}'
