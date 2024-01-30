@@ -58,7 +58,8 @@
   tags: servermonitoring
   become: true
   roles:
-    #- influxdb
+    - influxdb
+    - grafana
 
 - hosts: serverpostgresql
   tags: serverpostgresql

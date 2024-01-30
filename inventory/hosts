@@ -73,16 +73,16 @@ all:
       children:
         serverdomaincontroller:
           hosts:
-            # srv-dc01:
-            #   ansible_host: '{{ host_fqdn }}'
-            #   ansible_user: '{{ ssh_user }}'
-            #   ansible_password: '{{ ssh_password }}'
-            #   ansible_become_pass: '{{ ssh_become_pass }}'
-            # srv-dc02:
-            #   ansible_host: '{{ host_fqdn }}'
-            #   ansible_user: '{{ ssh_user }}'
-            #   ansible_password: '{{ ssh_password }}'
-            #   ansible_become_pass: '{{ ssh_become_pass }}'
+            srv-dc01:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
+            srv-dc02:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
         servermonitoring:
           hosts:
             # srv-metric:
@@ -97,11 +97,11 @@ all:
               ansible_become_pass: '{{ ssh_become_pass }}'
         serverpostgresql:
           hosts:
-            # srv-postgresql:
-            #   ansible_host: '{{ host_fqdn }}'
-            #   ansible_user: '{{ ssh_user }}'
-            #   ansible_password: '{{ ssh_password }}'
-            #   ansible_become_pass: '{{ ssh_become_pass }}'
+            srv-postgresql:
+              ansible_host: '{{ host_fqdn }}'
+              ansible_user: '{{ ssh_user }}'
+              ansible_password: '{{ ssh_password }}'
+              ansible_become_pass: '{{ ssh_become_pass }}'
     workstation:
       hosts:
         # wks-lpt01:

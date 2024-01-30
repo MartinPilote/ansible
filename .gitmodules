@@ -25,3 +25,9 @@
 [submodule "roles/certbot"]
 	path = roles/certbot
 	url = https://github.com/MartinPilote/ansible-role-certbot.git
+[submodule "roles/graylog"]
+	path = roles/graylog
+	url = https://github.com/MartinPilote/ansible-role-graylog.git
+[submodule "roles/grafana"]
+	path = roles/grafana
+	url = https://github.com/MartinPilote/ansible-role-grafana.git
