@@ -60,6 +60,7 @@
   roles:
     - influxdb
     - grafana
+    - graylog
 
 - hosts: serverpostgresql
   tags: serverpostgresql
